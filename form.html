@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        fieldset { border: 1px solid #888; margin-bottom: 15px; padding: 10px 15px; }
+        legend { font-weight: bold; }
+        table td { padding: 4px 6px; vertical-align: top; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="url"], textarea, select { width: 250px; }
+    </style>
+</head>
+<body>
+
+    <h2>Form Registrasi</h2>
+
+    <form action="" method="post">
+        
+        <!-- Biodata -->
+        <fieldset>
+            <legend>Biodata</legend>
+            <table>
+                <tr>
+                    <td>Nama Mahasiswa</td>
+                    <td>:</td>
+                    <td><input type="text" name="nama" placeholder="Nama Anda" required></td>
+                </tr>
+                <tr>
+                    <td>No Induk Mahasiswa (NIM)</td>
+                    <td>:</td>
+                    <td><input type="text" name="nim" value="123456789"></td>
+                </tr>
+                <tr>
+                    <td>Alamat Mahasiswa</td>
+                    <td>:</td>
+                    <td><textarea name="alamat" rows="4" placeholder="Alamat Anda"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td>
+                        <select name="tgl"><option>01</option><option>02</option></select>
+                        <select name="bln"><option>Januari</option><option>Februari</option></select>
+                        <select name="thn"><option>1990</option><option>2005</option></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" id="pria" name="jk" checked><label for="pria">Pria</label>
+                        <input type="radio" id="wanita" name="jk"><label for="wanita">Wanita</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Foto</td>
+                    <td>:</td>
+                    <td><input type="file" name="foto"></td>
+                </tr>
+                <tr>
+                    <td>URL Website</td>
+                    <td>:</td>
+                    <td><input type="url" name="url" placeholder="URL Website Anda"></td>
+                </tr>
+                <tr>
+                    <td>Perguruan Tinggi</td>
+                    <td>:</td>
+                    <td><input type="text" name="pt" value="Telkom University Surabaya"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Info Akun -->
+        <fieldset>
+            <legend>Info Akun</legend>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" name="email" placeholder="Email Anda" required></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>:</td>
+                    <td><input type="text" name="username" placeholder="Username Anda" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="password" placeholder="Password Anda" required></td>
+                </tr>
+                <tr>
+                    <td>Ulangi Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="ulang_password" placeholder="Password Anda" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Kemampuan Dasar -->
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <input type="checkbox" id="html"><label for="html"> HTML</label>
+            <input type="checkbox" id="css"><label for="css"> CSS</label>
+            <input type="checkbox" id="js"><label for="js"> Javascript</label>
+            <input type="checkbox" id="php"><label for="php"> PHP</label>
+            <input type="checkbox" id="mysql"><label for="mysql"> MySQL</label>
+            <input type="checkbox" id="laravel"><label for="laravel"> Laravel</label>
+            <input type="checkbox" id="react"><label for="react"> React Native</label>
+        </fieldset>
+
+        <div>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Simpan">
+            <input type="button" value="Button">
+        </div>
+
+    </form>
+
+</body>
+</html>
